@@ -1,8 +1,6 @@
-# download_ftp
+# index-grabber
 
 Рекурсивный скачиватель файлов с HTTP/HTTPS index-страниц (autoindex от nginx/apache).
-
-> **Важно:** Это не FTP-клиент. Скрипт работает с HTML-листингами директорий по HTTP/HTTPS.
 
 ## Возможности
 
@@ -31,7 +29,7 @@ cd download_ftp
 Просто запусти без аргументов:
 
 ```bash
-python download_ftp.py
+python index-grabber.py
 ```
 
 Скрипт спросит URL и папку для сохранения.
@@ -39,7 +37,7 @@ python download_ftp.py
 ### CLI
 
 ```bash
-python download_ftp.py "https://example.com/files/" -o ./downloads -t 8
+python index-grabber.py "https://example.com/files/" -o ./downloads -t 8
 ```
 
 ### Параметры
@@ -64,17 +62,17 @@ python download_ftp.py "https://example.com/files/" -o ./downloads -t 8
 
 Скачать только `.zip` файлы:
 ```bash
-python download_ftp.py "https://example.com/files/" --include "\.zip$"
+python index-grabber.py "https://example.com/files/" --include "\.zip$"
 ```
 
 Исключить временные файлы:
 ```bash
-python download_ftp.py "https://example.com/files/" --exclude "\.(tmp|bak)$"
+python index-grabber.py "https://example.com/files/" --exclude "\.(tmp|bak)$"
 ```
 
 Ограничить глубину одним уровнем:
 ```bash
-python download_ftp.py "https://example.com/files/" --max-depth 1
+python index-grabber.py "https://example.com/files/" --max-depth 1
 ```
 
 ## Как это работает
